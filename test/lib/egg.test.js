@@ -27,6 +27,7 @@ describe('test/lib/egg.test.js', () => {
       json = require(path.join(baseDir, 'run/application_config.json'));
       assert(/\d+\.\d+\.\d+/.test(json.plugins.onerror.version));
       assert(json.config.name === 'demo');
+      assert(json.config.dynamicConfig);
     });
 
     it('should console.log call inspect()', () => {
